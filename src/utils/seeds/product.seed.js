@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 const connectDb = require("../database/db")
 const Product = require("../../api/products/product.model")
 
-const productos = [
+const products = [
     {
         name: "yogur griego natural",
         img: "https://cdn-icons-png.flaticon.com/512/76/76208.png",

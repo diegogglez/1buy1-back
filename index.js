@@ -1,10 +1,11 @@
 const express = require("express");
-const indexRoutes = require("./src/api/index/index.routes");
-
-const db = require("./src/utils/database/db");
 const cors = require('cors');
 require("dotenv").config();
 const cloudinary = require("cloudinary").v2;
+
+const db = require("./src/utils/database/db");
+
+const indexRoutes = require("./src/api/index/index.routes");
 
 db.connectDb();
 
@@ -22,14 +23,17 @@ server.use(cors({
     credentials: true
 }))
 
-server.use(express.json({ limit: "5mb" }));
+server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 
 server.use("/", indexRoutes);
+// server.use("/users", userRouter);
+server.use("*", (req, res, next) => {
+  const error = new Error("Route not found");
+  error.status = 404;
+  next(error);
+});
 
-
-
-server.use("/users", userRouter);
 server.use((error, req, res, next) => {
   return res.status(error.status || 500).json(error.message || "Unexpected error");
 });
