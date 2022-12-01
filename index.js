@@ -7,6 +7,7 @@ const connectDb = require("./src/utils/database/db");
 
 const indexRoutes = require("./src/api/index/index.routes");
 const productRoutes = require("./src/api/products/product.routes")
+const usersRoutes = require("./src/api/users/user.routes")
 
 connectDb();
 
@@ -29,7 +30,7 @@ server.use(express.urlencoded({ extended: false }));
 
 server.use("/", indexRoutes);
 server.use("/products", productRoutes);
-// server.use("/users", userRouter);
+server.use("/users", usersRoutes);
 server.use("*", (req, res, next) => {
   const error = new Error("Route not found");
   error.status = 404;
