@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require("dotenv").config();
 const DB_URL = process.env.DB_URL;
 
 if (!DB_URL) throw new Error('url not found :(');
@@ -15,7 +16,4 @@ const connectDb = async () => {
 
 }
 
-module.exports = {
-  connectDb,
-  DB_URL,
-}
+module.exports = connectDb;
