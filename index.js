@@ -3,11 +3,12 @@ const cors = require('cors');
 require("dotenv").config();
 const cloudinary = require("cloudinary").v2;
 
-const db = require("./src/utils/database/db");
+const connectDb = require("./src/utils/database/db");
 
 const indexRoutes = require("./src/api/index/index.routes");
+const productRoutes = require("./src/api/products/product.routes")
 
-db.connectDb();
+connectDb();
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -27,6 +28,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 
 server.use("/", indexRoutes);
+server.use("/products", productRoutes);
 // server.use("/users", userRouter);
 server.use("*", (req, res, next) => {
   const error = new Error("Route not found");
