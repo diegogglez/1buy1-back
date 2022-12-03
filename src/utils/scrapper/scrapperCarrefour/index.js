@@ -1,7 +1,9 @@
 const puppeteer = require("puppeteer");
-const fs = require("fs");
 
-async function main() {
+async function main(genericProducts) {
+
+	console.log("CARREFOUR");
+	
 	const browser = await puppeteer.launch({
 		headless: true,
 	});
@@ -76,25 +78,25 @@ async function main() {
 			return Array.from(cards).map((product) => {
 
                 // Takes the name of the product
-                const name = product.querySelector("h2.product-card__title a")?.innerText.trim();
+                const productName = product.querySelector("h2.product-card__title a")?.innerText.trim();
 
 				// Takes the link and parses it
-                let id = product.querySelector("h2.product-card__title a")?.href.trim().split("/");
-				id = id[id.length - 2];
+                let code = product.querySelector("h2.product-card__title a")?.href.trim().split("/");
+				code = code[code.length - 2];
 
                 // Takes the price of the product and parses it
 				let priceUd = product.querySelector("span.product-card__price")?.innerText.trim();
 				priceUd = !priceUd
                 ? product.querySelector("span.product-card__price--current")?.innerText.trim()
                 : priceUd;
-				priceUd = priceUd.split(" ")[0].replace(",", ".");
+				priceUd = parseFloat(priceUd.split(" ")[0].replace(",", "."));
 
                 // Takes the price per kg of the product and parses it
 				let priceKg = product.querySelector("span.product-card__price-per-unit")?.innerText.trim();
-				priceKg = priceKg.split(" ")[0].replace(",", ".");
+				priceKg = parseFloat(priceKg.split(" ")[0].replace(",", "."));
                 
                 // Returns a made-up object with the key data
-				return { name, id, priceUd, priceKg };
+				return { productName, code, priceUd, priceKg };
 			});
 		});
 
@@ -108,10 +110,10 @@ async function main() {
 	}
 
 	// Filters the products into different categories
-    const chickenProducts = products.filter(product => product.name.toLowerCase().includes("pollo"));
-    const turkeyProducts = products.filter(product => product.name.toLowerCase().includes("pavo"));
-    const porkProducts = products.filter(product => product.name.toLowerCase().includes("cerdo"));
-    const beefProducts = products.filter(product => product.name.toLowerCase().includes("vacuno"));
+    const chickenProducts = products.filter(product => product.productName.toLowerCase().includes("pollo"));
+    const turkeyProducts = products.filter(product => product.productName.toLowerCase().includes("pavo"));
+    const porkProducts = products.filter(product => product.productName.toLowerCase().includes("cerdo"));
+    const beefProducts = products.filter(product => product.productName.toLowerCase().includes("vacuno"));
 
 	// Debuggin time
 	console.log(chickenProducts.length);
@@ -119,14 +121,32 @@ async function main() {
 	console.log(porkProducts.length);
 	console.log(beefProducts.length);
 
-    // Writes the file with the info
-	fs.writeFileSync("./productosCarniceriaPollo", JSON.stringify(chickenProducts));
-	fs.writeFileSync("./productosCarniceriaPavo", JSON.stringify(turkeyProducts));
-	fs.writeFileSync("./productosCarniceriaCerdo", JSON.stringify(porkProducts));
-	fs.writeFileSync("./productosCarniceriaVacuno", JSON.stringify(beefProducts));
+    genericProducts.forEach( product => {
+
+		let specificProduct;
+
+		product.productCode.forEach( supermarket => {
+			if (supermarket.supermarketName === "carrefour") {
+				specificProduct = chickenProducts.find( product => {
+					return product.code === supermarket.supermarketCode
+				})
+
+				specificProduct = {...specificProduct, supermarketName: "carrefour", logo: "CHANGE ME"}
+			}
+
+		})
+
+		product.supermarkets.push(specificProduct)
+
+	})
+
+	console.log(genericProducts[0]);
+
+	/* fs.writeFileSync(path.resolve(__dirname, "./genericProducts.js"), JSON.stringify(genericProducts)) */
+	
 
     // Exits
 	await browser.close();
 }
 
-main();
+module.exports = main;
