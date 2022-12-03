@@ -9,7 +9,21 @@ router.get('/', async (req, res) =>{
     const allProducts = await Product.find();
     return res.status(200).json(allProducts);
   } catch (error) {
-    return res.status(500).json(error.message)
+    return next(error)
+  }
+});
+
+router.post("/addProduct", upload.single("img"), async (req, res, next) => {
+  try {
+    const product = req.body;
+    if (req.file) {
+      product.img = req.file.path;
+    };
+    const newProduct = new Product(product);
+    const createdProduct = await newProduct.save();
+    return res.status(201).json(createdProduct);
+  } catch (error) {
+    return next(error);
   }
 });
 
