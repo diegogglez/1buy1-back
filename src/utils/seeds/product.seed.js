@@ -10,21 +10,21 @@ const products = [
         productLinks: [],
         supermarkets: [
             {
-                name: "carrefour",
+                supermarketName: "carrefour",
                 productName: "Yogur griego natural Carrefour Extra pack de 6 unidades de 125 g.",
                 priceUd: 1.45,
                 priceKg: 1.93,
                 logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Carrefour_logo.svg/1000px-Carrefour_logo.svg.png"
             },
             {
-                name: "alcampo",
+                supermarketName: "alcampo",
                 productName: "Yogur griego sabor natural PRODUCTO ALCAMPO 4 x 125 g.",
                 priceUd: 0.96,
                 priceKg: 1.92,
                 logo: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Logo_Alcampo-modified.png"
             },
             {
-                name: "dia",
+                supermarketName: "dia",
                 productName: "DIA FIDIAS yogur griego natural pack 6 unidades 125 gr",
                 priceUd: 1.59,
                 priceKg: 2.12,
@@ -39,21 +39,21 @@ const products = [
         productLinks: [],
         supermarkets: [
             {
-                name: "carrefour",
+                supermarketName: "carrefour",
                 productName: "Leche entera Carrefour brik 1 l.",
                 priceUd: 0.94,
                 priceL: 0.94,
                 logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Carrefour_logo.svg/1000px-Carrefour_logo.svg.png"
             },
             {
-                name: "alcampo",
+                supermarketName: "alcampo",
                 productName: "Leche entera de vaca PRODUCTO ALCAMPO 1 l.",
                 priceUd: 0.94,
                 priceL: 0.94,
                 logo: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Logo_Alcampo-modified.png"
             },
             {
-                name: "dia",
+                supermarketName: "dia",
                 productName: "DIA LACTEA leche entera envase 1 lt",
                 priceUd: 0.95,
                 priceL: 0.95,
@@ -68,19 +68,19 @@ const products = [
         productLinks: [],
         supermarkets: [
             {
-                name: "carrefour",
+                supermarketName: "carrefour",
                 productName: "Dorada de ración Carrefour 600 g aprox",
                 priceKg: 6.95,
                 logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Carrefour_logo.svg/1000px-Carrefour_logo.svg.png"
             },
             {
-                name: "alcampo",
+                supermarketName: "alcampo",
                 productName: "Dorada grande mostrador 800 Gramos Aproximados",
                 priceKg: 8.95,
                 logo: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Logo_Alcampo-modified.png"
             },
             {
-                name: "dia",
+                supermarketName: "dia",
                 productName: "Filete de dorada bandeja (peso aprox. 350 gr)",
                 priceKg: 20.80,
                 logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Dia_Logo.svg/1280px-Dia_Logo.svg.png"

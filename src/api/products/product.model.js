@@ -6,20 +6,21 @@ const productSchema = new Schema(
     {
         name: {type: String, required: true, trim: true},
         img: {type: String, required: true},
-        category: {type: String, required: true, trim: true, enum: ["lácteos", "pescadería"]},
-        productLinks: [
+        category: {type: String, required: true, trim: true},
+        productCode: [
             {
                 supermarketName: {type: String, trim: true},
-                supermarketLink: {type: String},
+                supermarketCode: {type: String},
             }
         ],
         supermarkets: [
             {
-                name: {type: String, required: true, trim: true},
+                supermarketName: {type: String, required: true, trim: true},
                 productName: {type: String, required: true, trim: true},
-                priceUd: {type: mongoose.Types.Decimal128, trim: true},
-                priceKg: {type: mongoose.Types.Decimal128, trim: true},
-                priceL: {type: mongoose.Types.Decimal128, trim: true},
+                priceUd: {type: Number, trim: true},
+                priceKg: {type: Number, trim: true},
+                priceL: {type: Number, trim: true},
+                supermarketCode: {type: String},
                 logo: {type: String, required: true, trim: true},
             }
         ]
