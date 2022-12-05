@@ -9,7 +9,7 @@ async function main(genericProducts) {
 
 	const page = await browser.newPage();
 	const links = [
-		"https://www.dia.es/compra-online/frescos/carne/cf",
+		"https://www.dia.es/compra-online/frescos/carne/pollo/cf",
 		"https://www.dia.es/compra-online/frescos/carne/vacuno/cf",
 		"https://www.dia.es/compra-online/frescos/pescado-y-marisco/pescado-y-marisco-fresco/cf",
 		"https://www.dia.es/compra-online/bebidas/aguas/cf/marcas+DIA",
