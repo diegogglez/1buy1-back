@@ -30,6 +30,20 @@ router.post("/postNewUser", async (req, res) => {
   }
 });
 
+router.put('/edit/:id', async (req, res, next) => {
+  try {
+      const { id } = req.params;
+      const user = req.body;
+
+      const userModify = new User(user);
+      userModify._id = id;
+      const userUpdate = await User.findByIdAndUpdate(id , userModify, {returnOriginal:false});
+      return res.status(200).json(userUpdate)
+  } catch (error) {
+      return next (error);
+  }
+})
+
 router.post("/login", async (req, res) => {
   try {
     const userDb = await User.findOne({ email: req.body.email });
