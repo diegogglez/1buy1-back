@@ -10,7 +10,7 @@
     "scrapperDia": "node ./src/utils/scrapper/scrapperDia/index.js",
     "scrapperAlcampo": "node ./src/utils/scrapper/scrapperAlcampo/index.js",
     "scrapperMaster": "node ./src/utils/scrapper/index.js",
-    "resetProducts": "node ./src/utils/seeds/product.seed.js"
+    "resetProducts": "node ./src/utils/seeds/clean.seed.js"
   },
   "keywords": [],
   "author": "",
