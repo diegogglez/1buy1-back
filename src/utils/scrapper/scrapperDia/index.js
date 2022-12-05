@@ -13,7 +13,7 @@ async function main(genericProducts) {
 		"https://www.dia.es/compra-online/frescos/pescado-y-marisco/pescado-y-marisco-fresco/cf",
 		"https://www.dia.es/compra-online/bebidas/aguas/cf/marcas+DIA",
 		"https://www.dia.es/compra-online/bebidas/zumos/cf/sabor+naranja",
-		"https://www.dia.es/compra-online/congelados/helados/cf/marcas+TEMPTATION",
+		"https://www.dia.es/compra-online/congelados/precocinados/cf/producto+croquetas",
 		"https://www.dia.es/compra-online/congelados/verduras-y-hortalizas/cf/marcas+VEGECAMPO",
 		"https://www.dia.es/compra-online/despensa/lacteos-y-huevos/leche/cf/marcas+DIA-LACTEA",
 		"https://www.dia.es/compra-online/despensa/lacteos-y-huevos/mantequilla-y-margarina/cf",

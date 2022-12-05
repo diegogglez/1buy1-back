@@ -13,7 +13,7 @@ async function main(genericProducts) {
         "https://www.carrefour.es/supermercado/productos-frescos/pescaderia/pescado-fresco/cat20125/c",
         "https://www.carrefour.es/supermercado/bebidas/aguas-y-zumos-carrefour/F-1123Z10si/c",
         "https://www.carrefour.es/supermercado/el-mercado/verduras-y-hortalizas/verduras-y-hortalizas-congeladas-carrefour-guisante/F-15ewZ10siZ1726/c",
-        "https://www.carrefour.es/supermercado/la-despensa/helados-carrefour/F-10yoZ10si/c",
+        "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/croquetas-y-rebozados/cat20114/c",
         "https://www.carrefour.es/supermercado/la-despensa/lacteos-carrefour/F-10tjZ10si/c",
         "https://www.carrefour.es/supermercado/la-despensa/alimentacion/pastas-carrefour-macarrones/F-10etZ10siZ11bp/c",
         "https://www.carrefour.es/supermercado/la-despensa/alimentacion/aceites-y-vinagres-carrefour-aceite-de-oliva-virgen-extra/F-108gZ10siZp646/c"
@@ -157,7 +157,6 @@ async function main(genericProducts) {
     }
 
 	/* fs.writeFileSync(path.resolve(__dirname, "./genericProducts.js"), JSON.stringify(genericProducts)) */
-	
 
     // Exits
 	await browser.close();

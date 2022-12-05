@@ -120,21 +120,21 @@ let genericProducts = [
         supermarkets: []
     },
     {
-        name: "Sandwich de nata 6 Ud.",
-        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082778/icons/congelados/congelados-23_kr8a2p.svg",
+        name: "Croquetas congeladas de Jamón 500g",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082778/icons/congelados/congelados-25_y67dzp.svg",
         category: "congelados",
         productCode: [
             {
                 supermarketName: "carrefour",
-                supermarketCode: "R-538003234"
+                supermarketCode: "R-VC4AECOMM-690584"
             },
             {
                 supermarketName: "dia",
-                supermarketCode: "271108"
+                supermarketCode: "52974"
             },
             {
                 supermarketName: "alcampo",
-                supermarketCode: "67739"
+                supermarketCode: "67042"
             }
         ],
         supermarkets: []
@@ -216,7 +216,7 @@ let genericProducts = [
         supermarkets: []
     },
     {
-        name: "Aceite de oliva virgen extra",
+        name: "Aceite de oliva virgen extra 1L",
         img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082708/icons/despensa/despensa-14_fhjxwi.svg",
         category: "despensa",
         productCode: [
@@ -226,7 +226,7 @@ let genericProducts = [
             },
             {
                 supermarketName: "dia",
-                supermarketCode: "12360"
+                supermarketCode: "112529"
             },
             {
                 supermarketName: "alcampo",

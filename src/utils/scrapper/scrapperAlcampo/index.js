@@ -12,7 +12,7 @@ async function main(genericProducts) {
 		"https://www.alcampo.es/compra-online/alimentacion/aceite-vinagre-salsas-especias/aceites/c/W2301?q=%3Arelevance%3AisAlcampoBrand%3Atrue&text=",
 		"https://www.alcampo.es/compra-online/alimentacion/caldos-pasta-arroz-legumbres-pure/pasta/c/W100501?q=%3Arelevance%3AisAlcampoBrand%3Atrue%3AcategoryChild%3AW100501002",
 		"https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/leche/c/W1603?q=%3Arelevance%3AisAlcampoBrand%3Atrue&text=",
-		"https://www.alcampo.es/compra-online/frio-y-congelados/helados/c/W200220184?q=%3Arelevance%3AisAlcampoBrand%3Atrue%3AcategoryChild%3AW120806",
+		"https://www.alcampo.es/compra-online/frio-y-congelados/congelados/patatas-croquetas-y-empanadillas/c/WCroquetasEmpanadillas?q=%3Arelevance%3AisAlcampoBrand%3Atrue%3AcategoryChild%3AW120503",
 		"https://www.alcampo.es/compra-online/frio-y-congelados/congelados/verduras/esparragos-y-guisantes/c/W120302",
 	];
 
