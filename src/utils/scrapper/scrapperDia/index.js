@@ -57,7 +57,7 @@ async function main(genericProducts) {
 						specificProduct = { 
 							...specificProduct, 
 							supermarketName: "dia", 
-							logo: "https://1000marcas.net/wp-content/uploads/2021/06/Dia-Logo.png" };
+							logo: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670203726/icons/supermarket-logos/superLogos-01_x0kosw.svg" };
 					}
 				}
 			});

@@ -136,7 +136,7 @@ async function main(genericProducts) {
                         specificProduct = {
                             ...specificProduct, 
                             supermarketName: "carrefour", 
-                            logo: "https://i0.wp.com/tekiosmag.com/wp-content/uploads/2022/04/5842906ca6515b1e0ad75abb.png?fit=880%2C660&ssl=1"}
+                            logo: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670203726/icons/supermarket-logos/superLogos-03_v3ulsb.svg"}
                     }
                 }
                     
