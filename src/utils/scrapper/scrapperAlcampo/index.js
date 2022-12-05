@@ -71,7 +71,7 @@ async function main(genericProducts) {
 						specificProduct = {
 							...specificProduct,
 							supermarketName: "alcampo",
-							logo: "CHANGE ME",
+							logo: "https://play-lh.googleusercontent.com/qEmZejZhdrECIK9juYUV7Fd-xQVvA3kRV1npL4t8ZJ4sVVGk0GrQM_hn73wDCBTcvn4",
 						};
 					}
 				}

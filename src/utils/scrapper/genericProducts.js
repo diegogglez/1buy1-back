@@ -1,7 +1,7 @@
 let genericProducts = [
     {
         name: "Pollo entero",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082361/icons/carniceria/carniceria-13-19_ha8pue.svg",
         category: "carnicería",
         productCode: [
             {
@@ -21,7 +21,7 @@ let genericProducts = [
     },
     {
         name: "Filete de vacuno",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082361/icons/carniceria/carniceria-11_dapccs.svg",
         category: "carnicería",
         productCode: [
             {
@@ -41,7 +41,7 @@ let genericProducts = [
     },
     {
         name: "Filete de salmón",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082489/icons/pescaderia/pescaderia-02_ypdsny.svg",
         category: "pescadería",
         productCode: [
             {
@@ -61,7 +61,7 @@ let genericProducts = [
     },
     {
         name: "Filete de merluza",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082489/icons/pescaderia/pescaderia-04_kllonw.svg",
         category: "pescadería",
         productCode: [
             {
@@ -81,7 +81,7 @@ let genericProducts = [
     },
     {
         name: "Botella de agua 1,5L",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082703/icons/bebidas/bebidas-06_krgqlb.svg",
         category: "bebidas",
         productCode: [
             {
@@ -101,7 +101,7 @@ let genericProducts = [
     },
     {
         name: "Zumo de naranja con pulpa 1L",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082703/icons/bebidas/bebidas-09-18_sejyc2.svg",
         category: "bebidas",
         productCode: [
             {
@@ -121,7 +121,7 @@ let genericProducts = [
     },
     {
         name: "Sandwich de nata 6 Ud.",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082778/icons/congelados/congelados-23_kr8a2p.svg",
         category: "congelados",
         productCode: [
             {
@@ -141,7 +141,7 @@ let genericProducts = [
     },
     {
         name: "Guisantes congelados 1Kg",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082778/icons/congelados/congelados-22_hbacuh.svg",
         category: "congelados",
         productCode: [
             {
@@ -161,7 +161,7 @@ let genericProducts = [
     },
     {
         name: "Leche semidesnatada 1L",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082556/icons/lacteos/lacteos-27_wz8tiv.svg",
         category: "lácteos",
         productCode: [
             {
@@ -181,7 +181,7 @@ let genericProducts = [
     },
     {
         name: "Mantequilla con sal 250g",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082556/icons/lacteos/lacteos-28_ejjltw.svg",
         category: "lácteos",
         productCode: [
             {
@@ -197,7 +197,7 @@ let genericProducts = [
     },
     {
         name: "Pack macarrones 1Kg",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082708/icons/despensa/despensa-15_pkfn6t.svg",
         category: "despensa",
         productCode: [
             {
@@ -217,7 +217,7 @@ let genericProducts = [
     },
     {
         name: "Aceite de oliva virgen extra",
-        img: "pending",
+        img: "https://res.cloudinary.com/dfxn0bmo9/image/upload/v1670082708/icons/despensa/despensa-14_fhjxwi.svg",
         category: "despensa",
         productCode: [
             {
