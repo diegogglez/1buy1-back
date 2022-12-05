@@ -47,14 +47,18 @@ async function main(genericProducts) {
 				const productName = product.querySelector(".productName span")?.innerText.trim();
 
 				const code = product.querySelector("h2 a").getAttribute("data-id");
+					
+				const pricePerArbitraryUnit = product.querySelector(".long-price")?.innerText.trim().split("\n");
+				const priceUd = parseFloat(pricePerArbitraryUnit[0].split(" ")[0].replace(",", "."));
+				let priceKg;
+				let priceL;
+				if (pricePerArbitraryUnit[1].includes("Kg")) {
+					priceKg = parseFloat(pricePerArbitraryUnit[1].replace("(", "").split(" ")[0].replace(",", "."))
+				} else if (pricePerArbitraryUnit[1].includes("Litro")){
+					priceL = parseFloat(pricePerArbitraryUnit[1].replace("(", "").split(" ")[0].replace(",", "."))
+				}
 
-				const price = product.querySelector(".long-price").innerText.trim();
-				const priceUd = parseFloat(price.split("\n")[0].split(" ")[0].replace(",", "."));
-				const priceKg = parseFloat(
-					price.split("\n")[1].replace("(", "").split(" ")[0].replace(",", ".")
-				);
-
-				return { productName, code, priceUd, priceKg };
+				return { productName, code, priceUd, priceKg, priceL };
 			});
 		});
 

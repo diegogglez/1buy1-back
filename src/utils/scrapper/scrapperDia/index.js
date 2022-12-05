@@ -36,11 +36,16 @@ async function main(genericProducts) {
 					a.querySelector(".price")?.innerText.split("€")[0].trim().replace(",", ".")
 				);
 
-				const priceKg = parseFloat(
-					a.querySelector(".pricePerKilogram")?.innerText.split("€")[0].trim().replace(",", ".")
-				);
+				const pricePerArbitraryUnit = a.querySelector(".pricePerKilogram")?.innerText.split("€");
+				let priceKg;
+				let priceL;
+				if (pricePerArbitraryUnit[1].includes("Kg")) {
+					priceKg = parseFloat(pricePerArbitraryUnit[0].trim().replace(",", "."))
+				} else if (pricePerArbitraryUnit[1].includes("l")){
+					priceL = parseFloat(pricePerArbitraryUnit[0].trim().replace(",", "."))
+				}
 
-				return { productName, code, priceUd, priceKg };
+				return { productName, code, priceUd, priceKg, priceL };
 			});
 		});
 

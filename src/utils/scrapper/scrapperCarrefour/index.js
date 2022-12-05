@@ -102,13 +102,19 @@ async function main(genericProducts) {
                     ? product.querySelector("span.product-card__price--current")?.innerText.trim()
                     : priceUd;
                     priceUd = parseFloat(priceUd.split(" ")[0].replace(",", "."));
-    
+                    
                     // Takes the price per kg of the product and parses it
-                    let priceKg = product.querySelector("span.product-card__price-per-unit")?.innerText.trim();
-                    priceKg = parseFloat(priceKg.split(" ")[0].replace(",", "."));
+                    const pricePerArbitraryUnit = product.querySelector("span.product-card__price-per-unit")?.innerText.split(" ");
+                    let priceKg;
+                    let priceL;
+                    if (pricePerArbitraryUnit[1].includes("kg")) {
+                        priceKg = parseFloat(pricePerArbitraryUnit[0].trim().replace(",", "."))
+                    } else if (pricePerArbitraryUnit[1].includes("l")){
+                        priceL = parseFloat(pricePerArbitraryUnit[0].trim().replace(",", "."))
+                    }
                     
                     // Returns a made-up object with the key data
-                    return { productName, code, priceUd, priceKg };
+                    return { productName, code, priceUd, priceKg, priceL };
                 });
             });
 
