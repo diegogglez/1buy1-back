@@ -1,7 +1,6 @@
 const puppeteer = require("puppeteer");
 
 async function main(genericProducts) {
-	console.log("ALCAMPO");
 
 	const links = [
 		"https://www.alcampo.es/compra-online/frescos/carne/pollo/c/W1301",

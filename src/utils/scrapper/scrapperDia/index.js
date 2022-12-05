@@ -1,7 +1,6 @@
 const puppeteer = require("puppeteer");
 
 async function main(genericProducts) {
-	console.log("DIA");
 
 	const browser = await puppeteer.launch({
 		headless: true,
@@ -9,7 +8,7 @@ async function main(genericProducts) {
 
 	const page = await browser.newPage();
 	const links = [
-		"https://www.dia.es/compra-online/frescos/carne/pollo/cf",
+		"https://www.dia.es/compra-online/frescos/carne/pollo/cf/marcas+SELECCI%C3%93N-DE-DIA",
 		"https://www.dia.es/compra-online/frescos/carne/vacuno/cf",
 		"https://www.dia.es/compra-online/frescos/pescado-y-marisco/pescado-y-marisco-fresco/cf",
 		"https://www.dia.es/compra-online/bebidas/aguas/cf/marcas+DIA",
