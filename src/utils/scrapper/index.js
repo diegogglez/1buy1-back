@@ -20,7 +20,7 @@ const activateScrappers = async () => {
     console.log(genericProducts);
 
     for (let genericProduct of genericProducts) {
-        await axios.post("http://localhost:8080/products/addProduct", genericProduct)
+        await axios.post("https://1buy1-back.vercel.app/products/addProduct", genericProduct)
     }
 }
 

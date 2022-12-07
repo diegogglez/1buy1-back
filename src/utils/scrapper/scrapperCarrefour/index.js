@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 async function main(genericProducts) {
 	
 	const browser = await puppeteer.launch({
-		headless: true
+		headless: false
 	});
 	const page = await browser.newPage();
 
